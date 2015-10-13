@@ -2,8 +2,8 @@
 //  main.swift
 //  calc
 //
-//  Created by iGuest on 10/13/15.
-//  Copyright (c) 2015 iGuest. All rights reserved.
+//  Created by Jooneil Ahn on 10/13/15.
+//  Copyright (c) 2015 Jooneil Ahn. All rights reserved.
 //
 
 import Foundation
@@ -86,28 +86,29 @@ var dictTwo = [
     "x" : 4.0,
     "y" : 2.0
 ]
+
 //Testing functions
 
 // Calculator
-println(add(5, 7)) //result should be 12
-println(subtract(5, 7)) // result should be -2
-println(multiply(5, 7)) // result should be 35
-println(divide(40, 8)) // result should be 5
-println(mathOp(5, 7, add))
-println(mathOp(5, 7, subtract))
-println(mathOp(5, 7, multiply))
-println(mathOp(40, 8, divide))
+print(add(5, numTwo: 7)) //result should be 12
+print(subtract(5, numTwo: 7)) // result should be -2
+print(multiply(5, numTwo: 7)) // result should be 35
+print(divide(40, numTwo: 8)) // result should be 5
+print(mathOp(5, numTwo: 7, op: add))
+print(mathOp(5, numTwo: 7, op: subtract))
+print(mathOp(5, numTwo: 7, op: multiply))
+print(mathOp(40, numTwo: 8, op: divide))
 
 // Array Fun
 let testArray = [1, 2, 3, 4, 5]
-println(newAdd(testArray)) // result should be 15
-println(newMultiply(testArray)) // result should be 120
-println(count(testArray)) // result should be 5
-println(avg(testArray)) // result should be 3
-println(newMathOp(testArray, count)) // should be 5
-println(newMathOp(testArray, avg)) //should be 3
+print(newAdd(testArray)) // result should be 15
+print(newMultiply(testArray)) // result should be 120
+print(count(testArray)) // result should be 5
+print(avg(testArray)) // result should be 3
+print(newMathOp(testArray, op: count)) // should be 5
+print(newMathOp(testArray, op: avg)) //should be 3
 
 // Points
-println(addPoints(dict, dictTwo)) // result should be (7.0, 5.0)
-println(subtractPoints(dict, dictTwo)) // result should be (-1.0, 1.0)
+print(addPoints(dict, pointTwo: dictTwo)) // result should be (7.0, 5.0)
+print(subtractPoints(dict, pointTwo: dictTwo)) // result should be (-1.0, 1.0)
 
