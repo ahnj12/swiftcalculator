@@ -58,21 +58,30 @@ func newMathOp (numArray : [Int], op : ([Int]) -> Int) -> Int {
     return op(numArray)
 }
 
-func addPoints (numbers : [Double : Double]) -> (Double, Double) {
-    var xResult = 0.0
-    var yResult = 0.0
-
-    for (x, y) in numbers {
-        xResult = x + xResult
-        yResult = y + yResult
-    }
+func addPoints (pointOne : [String : Double], pointTwo : [String : Double]) -> (Double, Double) {
+    
+    let xResult = pointOne["x"]! + pointTwo["x"]!
+    let yResult = pointOne["y"]! + pointTwo["y"]!
     return (xResult, yResult)
 }
 
+func subtractPoints (pointOne : [String : Double], pointTwo : [String : Double]) -> (Double, Double) {
+    if pointOne["x"] == nil || pointTwo["x"] == nil{
+        
+    }
+    let xResult = pointOne["x"]! - pointTwo["x"]!
+    let yResult = pointOne["y"]! - pointTwo["y"]!
+    return (xResult, yResult)
+}
 var dict = [
-    4.0 : 3.0,
-    2.0 : 3.0
+    "x" : 3.0,
+    "y" : 3.0
 ]
 
-print(addPoints(dict))
+var dictTwo = [
+    "x" : 4.0,
+    "y" : 2.0
+]
+
+print(addPoints(dict, pointTwo: dictTwo))
 
