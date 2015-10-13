@@ -58,4 +58,21 @@ func newMathOp (numArray : [Int], op : ([Int]) -> Int) -> Int {
     return op(numArray)
 }
 
-func addPoints
+func addPoints (numbers : [Double : Double]) -> (Double, Double) {
+    var xResult = 0.0
+    var yResult = 0.0
+
+    for (x, y) in numbers {
+        xResult = x + xResult
+        yResult = y + yResult
+    }
+    return (xResult, yResult)
+}
+
+var dict = [
+    4.0 : 3.0,
+    2.0 : 3.0
+]
+
+print(addPoints(dict))
+
